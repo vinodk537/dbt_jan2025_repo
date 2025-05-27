@@ -7,4 +7,4 @@ select *
 from raw_data.{{src_table}}
 qualify row_number() over (partition by {{unique_key}} order by {{ts_col}} desc) = 1;
 
-{% endmacro %}
+{% endmacro%}
